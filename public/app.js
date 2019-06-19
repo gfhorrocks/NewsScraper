@@ -1,4 +1,5 @@
 // Grab the articles as a json
+$(document).ready( displayArticles() );  //if page is refreshed, display data
 
 function displayArticles(){
   $.get("/articles", function (data) {
@@ -87,8 +88,3 @@ $(document).on("click","#scrape",function(){
     alert(res);                 //alerts user that scrape is complete
   }).then( displayArticles() ); //displays the data on screen
 });
-
-$(document).ready( displayArticles() );  //if page is refreshed, display data
-
-
-
