@@ -6,20 +6,25 @@
     <style>
       body { background-color: darkgray }
       #wrapper {
-        width: 960px;
+        width: 80%;
         margin-left: auto;
         margin-right: auto;
-        padding-top: 5%;
+        padding-top: 2%;
+        text-align: center;
       }
       #articles{
         display: inline-block;
         overflow: auto;
-        width: 60%;
-        height: 700px;
+        width: 100%;
+        height: auto;
       }
       #notes {
-        float: right;
-        width: 40%;
+        /* float: right; */
+        width: 100%;
+        text-align: center;
+        padding-top: 0;
+        padding-bottom: 10px;
+
       }
       textarea, input {
         display: block;
@@ -27,27 +32,38 @@
         background-color: #FCF5C7;
       }
       input {
-        height: 36px;
-        font-size: 24px;
+        height: auto;
+        font-size: 20px;
+        align-content: center;
+        background: white;
       }
       textarea{
-        height: 200px;
-        font-size: 18px;
+        height: auto;
+        font-size: 16px;
+        background: white;
       }
       img{
-        height: 100%;
-        float: center;
-
+        /* background-position: top left; */
+        float: left;
+        height: 99%;
+        margin-top: 1px;
       }
-      p{
-        display: inline-block;
-        width: 98%;
+      .dataRow{
+        height: 80px;
+        width: 100%;
         border-color: black;
         border-style: solid;
         border-width: 5px;
         text-align: center;
+        line-height: 20px;
+        margin-bottom: 10px;
       }
       a{
+        color: black;
+        margin-left: auto;
+      }
+      input,textarea{
+        background-color: lightgray;
         color: black;
       }
       
@@ -55,12 +71,15 @@
   </head>
   <body>
     <div id="wrapper">
-      <h1>Reddit Gaming Scraper</h1>
+      <h1 class="jumbotron">Reddit Gaming Scraper</h1>
       <h2><i>Scraping the contents of /r/gaming since 2019!</i></h2>
+      <!-- <div class='jumbotron' id="notes"></div> -->
       <h3>Click a block to write a comment</h3>
-      <div id="articles"></div>
-      <div id="notes"></div>
+      <div id="articles">
+      </div>
+
     </div>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="app.js"></script>
   </body>
