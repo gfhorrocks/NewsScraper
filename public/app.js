@@ -86,5 +86,5 @@ $(document).on("click", "#savenote", function () {
 $(document).on("click","#scrape",function(){
   $.get("/scrape",function(res){
     alert(res);                 //alerts user that scrape is complete
-  }).then( displayArticles() ); //displays the data on screen
+  }).then( displayArticles ); //displays the data on screen
 });
