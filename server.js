@@ -11,7 +11,7 @@ var cheerio = require("cheerio");
 // Require all models
 var db = require("./models");
 
-var PORT = 39797;
+var PORT = process.env.PORT || 3000;
 
 // Initialize Express
 var app = express();
@@ -28,9 +28,9 @@ app.use(express.static("public"));
 
 // Connect to the Mongo DB
 // var MONGODB_URI = "mongodb://admin:XLR8f45t@ds239797.mlab.com:39797/heroku_mwfbgvpx";
-// mongoose.connect(MONGODB_URI);
+mongoose.connect(MONGODB_URI, {useNewUrlParser: true});
 
-mongoose.connect("mongodb://admin:XLR8f45t@ds239797.mlab.com:39797/heroku_mwfbgvpx", { useNewUrlParser: true });
+//mongoose.connect("mongodb://admin:XLR8f45t@ds239797.mlab.com:39797/heroku_mwfbgvpx", { useNewUrlParser: true });
 // Routes
 
 // A GET route for scraping the echoJS website
