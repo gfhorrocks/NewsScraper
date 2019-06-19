@@ -27,7 +27,7 @@ app.use(express.json());
 app.use(express.static("public"));
 
 // Connect to the Mongo DB
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/gamingscraper";
+var MONGODB_URI = "mongodb://admin:XLR8f45t@ds239797.mlab.com:39797/heroku_mwfbgvpx";
 mongoose.connect(MONGODB_URI);
 // Routes
 
